@@ -1,0 +1,31 @@
+'.source.js.jsx':
+  'react-es6-class':
+    'prefix': 'res6c'
+    'body': """
+      import React from 'react';
+
+      export default class ${1:ClassName} extends React.Component {
+
+        constructor(props) {
+          super(props);
+
+          // bindings
+        }
+
+        render() {
+          return (
+            <div />
+          );
+        }
+      }
+
+      ${1:ClassName}.propTypes = {
+        prop1: React.PropTypes.node,
+      };
+
+    """
+
+  'constructor-bind':
+    'prefix': 'cbind'
+    'body': 'this.${1:functionName} = this.${1:functionName}.bind(this);'
+
